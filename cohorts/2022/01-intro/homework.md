@@ -5,6 +5,25 @@
 You need to install Python, NumPy, Pandas, Matplotlib and Seaborn. For that, you can the instructions from
 [06-environment.md](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/01-intro/06-environment.md).
 
+I'll use anaconda for this:
+
+1. Create the enviroment 
+```
+conda create -n mlbookcamp python=3.9
+```
+2. Activate the enviroment
+```
+conda activate mlbookcamp
+```
+3. Install the packages
+```
+pip install -r requirements.txt
+```
+4. Install ipykernel
+```
+pip install ipykernel
+```
+Working on [Homework 1](homework.ipynb)
 ### Question 1
 
 What's the version of NumPy that you installed? 
@@ -14,7 +33,7 @@ You can get the version information using the `__version__` field:
 ```python
 np.__version__
 ```
-
+## Answer: 1.23.2
 ### Getting the data 
 
 For this homework, we'll use the Car price dataset. Download it from 
@@ -40,7 +59,7 @@ Here you need to specify the number of rows.
 - 6572
 - 11914
 - 18990
-
+## Answer: 11914
 ### Question 3
 
 Who are the most popular car manufacturers (top-3) according to the dataset?
@@ -49,7 +68,7 @@ Who are the most popular car manufacturers (top-3) according to the dataset?
 - Chevrolet, Ford, Toyota
 - Ford, Volkswagen, Toyota
 - Chevrolet, Ford, Volkswagen
-
+## Answer: Chevrolet, Ford, Volkswagen
 ### Question 4
 
 What's the number of unique Audi car models in the dataset?
@@ -58,7 +77,7 @@ What's the number of unique Audi car models in the dataset?
 - 16
 - 26
 - 34
-
+## Answer: 34
 ### Question 5
 
 How many columns in the dataset have missing values?
@@ -67,7 +86,7 @@ How many columns in the dataset have missing values?
 - 6
 - 7
 - 8
-
+## Answer: 5
 ### Question 6
 
 * Find the median value of "Engine Cylinders" column in the dataset.
@@ -81,7 +100,7 @@ Has it changed?
 
 - Yes
 - No
-
+## Answer: No
 ### Question 7
 
 * Select all the "Lotus" cars from the dataset.
@@ -101,7 +120,7 @@ Has it changed?
 - 31.6537
 - 63.5643
 
-
+## Answer: 4.5949
 ## Submit the results
 
 Submit your results here: https://forms.gle/vLp3mvtnrjJxCZx66
