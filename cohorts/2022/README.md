@@ -17,7 +17,7 @@
 **2. Machine Learning for Regression**
 
 * [Module materials](../../02-regression)
-* TBA
+* [Homework](02-regression/README.md)
 
 **3. Machine Learning for Classification**
 
