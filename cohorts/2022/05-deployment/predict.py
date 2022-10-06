@@ -17,11 +17,11 @@ def predict():
 
     X = dv.transform([customer])
     y_pred = model.predict_proba(X)[0, 1]
-    churn = y_pred >= 0.5
+    score = y_pred >= 0.5
 
     result = {
         'credit_card_probability': float(y_pred),
-        'credit_card': bool(churn)
+        'credit_card': bool(score)
     }
 
     return jsonify(result)
