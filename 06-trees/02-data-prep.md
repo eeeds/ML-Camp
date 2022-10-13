@@ -6,9 +6,55 @@
 
 
 ## Notes
+Mapping status_values as follows:
+```
+status_values = {
+    1: 'ok',
+    2: 'default',
+    0: 'unk'
+}
 
-Add notes from the video (PRs are welcome)
+home_values = {
+    1: 'rent',
+    2: 'owner',
+    3: 'private',
+    4: 'ignore',
+    5: 'parents',
+    6: 'other',
+    0: 'unk'
+}
 
+df.home = df.home.map(home_values)
+
+marital_values = {
+    1: 'single',
+    2: 'married',
+    3: 'widow',
+    4: 'separated',
+    5: 'divorced',
+    0: 'unk'
+}
+
+df.marital = df.marital.map(marital_values)
+
+records_values = {
+    1: 'no',
+    2: 'yes',
+    0: 'unk'
+}
+
+df.records = df.records.map(records_values)
+
+job_values = {
+    1: 'fixed',
+    2: 'partime',
+    3: 'freelance',
+    4: 'others',
+    0: 'unk'
+}
+
+df.job = df.job.map(job_values)
+```
 
 <table>
    <tr>
