@@ -40,6 +40,12 @@ Add notes from the video (PRs are welcome)
 11. Results on ![bentoml build](images/bento-model.PNG)
 12. Containerize your bento model with `bentoml containerize credit_risk_model:latest`
 13. Working with pydantic on `code/service.py`
+14. Install pydanctic with `pip install pydantic`
+15. Serving with locust, install locust with `pip install locust`
+16. Start a local server with `locust -H http://localhost:3000`
+where 3000 is the port where the service is running (bentoml).
+17. Open the locust web interface on http://localhost:8089
+18. Async-away optimizations with `async` (every request needs to be serviced one by one)
 <table>
    <tr>
       <td>⚠️</td>
