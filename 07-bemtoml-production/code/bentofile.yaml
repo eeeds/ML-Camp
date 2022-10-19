@@ -1,0 +1,10 @@
+service: "service.py:svc"
+labels:
+  owner: Esteban Encina
+  project: mlbootcamp-example
+include:
+- "*.py"
+python:
+  packages:
+    - xgboost
+    - scikit-learn

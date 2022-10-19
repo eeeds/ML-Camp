@@ -3,7 +3,7 @@ import numpy as np
 import bentoml
 from bentoml.io import JSON
 
-model_ref = bentoml.xgboost.get("credit_risk_model:oyfd25cj3oijqdu5")
+model_ref = bentoml.xgboost.get("credit_risk_model:sqoxub2pw2iygcep")
 dv = model_ref.custom_objects['dictVectorizer']
 
 model_runner = model_ref.to_runner()

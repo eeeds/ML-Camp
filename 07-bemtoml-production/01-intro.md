@@ -10,7 +10,36 @@
 
 Add notes from the video (PRs are welcome)
 
-
+1. Install BentoML: `pip install bentoml`
+2. Try on [train.ipynb](code/train.ipynb)
+3. Add `svc.api(input = JSON(), output = JSON(=))` for use the model with curl and rest
+4. Call the service with the following command: `bentoml serve service.py:svc`
+5. Add `--reload` to reload the service when the code changes
+6. Try the following example:
+```
+{
+  "seniority": 3,
+  "home": "owner",
+  "time": 36,
+  "age": 26,
+  "marital": "single",
+  "records": "no",
+  "job": "freelance",
+  "expenses": 35,
+  "income": 0.0,
+  "assets": 60000.0,
+  "debt": 3000.0,
+  "amount": 800,
+  "price": 1000
+}
+```
+7. List of your bento models: `bentoml models list`
+8. Get details of your bento model: `bentoml models get credit_risk_model:sqoxub2pw2iygcep`
+9. Create your [bentofile.yaml](code/bentofile.yaml)
+10. Build your bento (using a bentofile.yaml) with `bentoml build `
+11. Results on ![bentoml build](images/bento-model.PNG)
+12. Containerize your bento model with `bentoml containerize credit_risk_model:latest`
+13. Working with pydantic on `code/service.py`
 <table>
    <tr>
       <td>⚠️</td>
