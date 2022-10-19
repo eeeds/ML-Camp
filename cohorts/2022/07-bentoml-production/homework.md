@@ -49,7 +49,7 @@ Choose the size closest to your model.
 
 ![q2_2](images/q2_2.PNG)
 
-> Answer: 1kb
+> Answer: 114kb
 
 
 
@@ -82,6 +82,21 @@ Say you have the following data that you're sending to your service:
 
 What would the pydantic class look like? You can name the class `UserProfile`.
 
+> Answer:
+```
+from pydantic import BaseModel
+
+import bentoml
+from bentoml.io import JSON
+
+
+class UserProfile(BaseModel):
+    name:str 
+    age: int 
+    country: str 
+    rating: float 
+
+```
 
 ## Email from your CEO
 
@@ -110,6 +125,10 @@ What version of scikit-learn was this model trained with?
 * 1.1.4
 * 1.1.5
 
+We can know this by using `bentoml models list` command and 
+`bentoml models get  mlzoomcamp_homework:qtzdz3slg6mwwdu5`
+
+> Answer: 1.1.1
 ## Question 5 
 
 Create a bento out of this scikit-learn model. This will require installing scikit-learn like this:
@@ -132,6 +151,10 @@ You can use curl or the Swagger UI. What value does it return?
 * 2
 * 3
 
+Start server using `bentoml serve service.py:svc --reload`
+![q5](images/q5.PNG)
+
+> Answer: 1
 ## Question 6
 
 Ensure to serve your bento with `--production` for this question
