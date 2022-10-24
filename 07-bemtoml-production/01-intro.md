@@ -46,6 +46,32 @@ Add notes from the video (PRs are welcome)
 where 3000 is the port where the service is running (bentoml).
 17. Open the locust web interface on http://localhost:8089
 18. Async-away optimizations with `async` (every request needs to be serviced one by one)
+19. Bath request:
+```
+## Batching requests
+import bentoml 
+
+bentoml.xgboost.save_model(
+    'credit_risk_model',
+    model, 
+    custom_objects={
+        "dictVectorizer": dv 
+    },
+    signatures={ #model signatures for runner  inferencing
+        "predict": {
+            "batchable": True,
+            "batch_dim": 0,
+        }
+)
+```
+20. Then use the following command to serve the model (combine inputs into a batch):
+```
+bentoml serve --production
+```
+21. Bento Porudction Deployment: 
+```
+
+```
 <table>
    <tr>
       <td>⚠️</td>

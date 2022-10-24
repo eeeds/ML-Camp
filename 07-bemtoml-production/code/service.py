@@ -20,7 +20,7 @@ class CreditApplication(BaseModel):
     amount: int 
     price: int 
 
-model_ref = bentoml.xgboost.get("credit_risk_model:sqoxub2pw2iygcep")
+model_ref = bentoml.xgboost.get("credit_risk_model_batch:26ipeo2qtgurucep")
 dv = model_ref.custom_objects['dictVectorizer']
 
 model_runner = model_ref.to_runner()

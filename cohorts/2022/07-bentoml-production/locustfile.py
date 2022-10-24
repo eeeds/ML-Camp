@@ -3,7 +3,6 @@ from locust import between
 from locust import HttpUser
 
 sample = [[6.4,3.5,4.5,1.2]]
-
 class MLZoomUser(HttpUser):
     """
     Usage:
