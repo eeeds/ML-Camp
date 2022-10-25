@@ -109,7 +109,7 @@ More information coming soon!
 - 6.12 [Homework](06-trees/homework.md)
 
 
-## 7. [Midterm Project](07-midterm-project/)
+## 8. [Midterm Project](08-midterm-project/)
 
 Putting everything we've learned so far in practice!
 
