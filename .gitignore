@@ -1,5 +1,6 @@
 cohorts/2022/05*/Pyt*
 __pycache__/
 08-midterm-project/*.json
-08-midterm-project/.cache
+08-midterm-project/data/*.csv
+08-midterm-project/notebooks/.cache
 
