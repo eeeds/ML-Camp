@@ -20,3 +20,19 @@ The EDA, train and model-evaluation is in this [notebook](notebooks/notebook.ipy
 Train script is [here](train.py)
 ## Predict script
 Predict script is [here](predict.py)
+## Testing predict-script.
+I'll test the script with a random music of the dataset.
+### Results
+![Predict-script](images/testing-script.PNG)
+## Docker
+I'll create a pipenv for this and use `Pipfile` and `Pipfile.lock` for the docker container.
+### Create a pipenv
+`pipenv install`
+### Activate the pipenv
+`pipenv shell`
+### Install requirements.txt
+`pip install -r requirements.txt`
+### Build the docker image
+`docker build -t midterm-project .`
+### Run the docker image
+`docker run -it midterm-project`
