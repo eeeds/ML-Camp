@@ -32,43 +32,43 @@ def get_data():
     """
     # Read the data
     # Music that I like
-    artic_monkeys_df = pd.read_csv('../data/arctic_monkeys_data.csv')
+    artic_monkeys_df = pd.read_csv('./data/arctic_monkeys_data.csv')
     artic_monkeys_df = music_that_i_like(artic_monkeys_df, like = True)
-    cerati_df = pd.read_csv('../data/cerati_data.csv')
+    cerati_df = pd.read_csv('./data/cerati_data.csv')
     cerati_df = music_that_i_like(cerati_df, like = True)
-    new_fang_df = pd.read_csv('../data/new_fang_radio.csv')
+    new_fang_df = pd.read_csv('./data/new_fang_radio.csv')
     new_fang_df = music_that_i_like(new_fang_df, like = True)
-    pink_floyd_df = pd.read_csv('../data/pink_floyd_data.csv')
+    pink_floyd_df = pd.read_csv('./data/pink_floyd_data.csv')
     pink_floyd_df = music_that_i_like(pink_floyd_df, like = True)
-    qotsa_df = pd.read_csv('../data/qotsa_data.csv')
+    qotsa_df = pd.read_csv('./data/qotsa_data.csv')
     qotsa_df = music_that_i_like(qotsa_df, like = True)
 
     # Music that I don't like
-    kpop_df = pd.read_csv('../data/kpop_radio.csv')
+    kpop_df = pd.read_csv('./data/kpop_radio.csv')
     kpop_df = music_that_i_like(kpop_df, like = False)
-    reggaeton_df = pd.read_csv('../data/reggaeton1.csv')
+    reggaeton_df = pd.read_csv('./data/reggaeton1.csv')
     reggaeton_df = music_that_i_like(reggaeton_df, like = False)
-    trapper_df = pd.read_csv('../data/trappers_argentina.csv')
+    trapper_df = pd.read_csv('./data/trappers_argentina.csv')
     trapper_df = music_that_i_like(trapper_df, like = False)
-    latino_df = pd.read_csv('../data/viva_latino.csv')
+    latino_df = pd.read_csv('./data/viva_latino.csv')
     latino_df = music_that_i_like(latino_df, like = False)
-    tini_df = pd.read_csv('../data/tini.csv')
+    tini_df = pd.read_csv('./data/tini.csv')
     tini_df = music_that_i_like(tini_df, like = False)
-    camilo_df = pd.read_csv('../data/camilo.csv')
+    camilo_df = pd.read_csv('./data/camilo.csv')
     camilo_df = music_that_i_like(camilo_df, like = False)
-    top_hits_df = pd.read_csv('../data/top_hits.csv')
+    top_hits_df = pd.read_csv('./data/top_hits.csv')
     top_hits_df = music_that_i_like(top_hits_df, like = False)
-    cumbia_df = pd.read_csv('../data/cumbia.csv')
+    cumbia_df = pd.read_csv('./data/cumbia.csv')
     cumbia_df = music_that_i_like(cumbia_df, like = False)
-    elegante_df = pd.read_csv('../data/elegante.csv')
+    elegante_df = pd.read_csv('./data/elegante.csv')
     elegante_df = music_that_i_like(elegante_df, like = False)
-    villagran_df =pd.read_csv('../data/villagran.csv')
+    villagran_df =pd.read_csv('./data/villagran.csv')
     villagran_df = music_that_i_like(villagran_df, like = False)
-    pop_list_df = pd.read_csv('../data/pop_list.csv')
+    pop_list_df = pd.read_csv('./data/pop_list.csv')
     pop_list_df = music_that_i_like(pop_list_df, like = False)
-    bad_bunny_df = pd.read_csv('../data/bad_bunny.csv')
+    bad_bunny_df = pd.read_csv('./data/bad_bunny.csv')
     bad_bunny_df = music_that_i_like(bad_bunny_df, like = False)
-    daddy_yankee_df = pd.read_csv('../data/daddy_yankee.csv')
+    daddy_yankee_df = pd.read_csv('./data/daddy_yankee.csv')
     daddy_yankee_df = music_that_i_like(daddy_yankee_df, like = False)
 
     ## Concat all the datasets
@@ -118,8 +118,8 @@ if __name__ == '__main__':
     model = LogisticRegression(solver='lbfgs', C = 0.01)
     model.fit(X_train, y_train)
     ## Saving the model as a pickle
-    with open('../models/model.pkl', 'wb') as f:
+    with open('./models/model.pkl', 'wb') as f:
         pickle.dump(model, f)
     ## Saving the DictVectorizer as a pickle
-    with open('../models/dv.pkl', 'wb') as f:
+    with open('./models/dv.pkl', 'wb') as f:
         pickle.dump(dv, f)
