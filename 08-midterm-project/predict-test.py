@@ -4,7 +4,7 @@
 import requests
 
 
-url = 'http://localhost:9696/predict'
+url = 'http://172.17.0.2:5000/predict'
 
 music = {'danceability': 0.428,
  'energy': 0.365,
