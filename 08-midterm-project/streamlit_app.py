@@ -6,7 +6,7 @@ import json
 import pandas as pd 
 
 st.write("""
-# I would like this music?
+# Would I like this music?
 # Well, we can find out.
 This app predicts if I will like a music or not.
 """
@@ -45,7 +45,6 @@ st.image(image, caption='')
 
 
 music_selected = final_data_df[final_data_df['name']==music].reset_index()
-music_selected.to_csv('prueba.csv')
 music_selected.drop(['like'], inplace= True, axis = 1)
 
 

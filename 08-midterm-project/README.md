@@ -19,6 +19,8 @@
     - [Test docker container](#test-docker-container)
 - [Model as a Service](#model-as-a-service)
   - [Install streamlit](#install-streamlit)
+  - [Run the app](#run-the-app)
+  - [Results](#results-1)
 # Dataset
 I've created my own dataset. I've downloaded some music from spotify with the notebook [spotify-notebook](notebooks/spotify_data.ipynb), then I concataned the data.
 You can find de data documentation (playlist and artists) in this [notebook](notebooks/notebook.ipynb).
@@ -69,3 +71,7 @@ You can use the same `predict-test.py` script to test your docker-container.
 I'll use streamlit to deploy the model.
 ## Install streamlit
 `pip install streamlit`
+## Run the app
+`streamlit run streamlit_app.py`
+## Results
+![Testing the app](images/testing-app.gif)
