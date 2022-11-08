@@ -35,40 +35,34 @@ model, dv = load_model()
 final_data_df = pd.read_csv('data/final_data.csv')
 
 musics = final_data_df.name 
-artists = final_data_df.
 ##Select the music
 music = st.selectbox(
     'Music',
     musics
 )
-
 image = Image.open('images/spotify.PNG')
 st.image(image, caption='')
 
 
+music_selected = final_data_df[final_data_df['name']==music].reset_index()
+music_selected.to_csv('prueba.csv')
+music_selected.drop(['like'], inplace= True, axis = 1)
 
 
+music_selected = music_selected.to_dict(orient='records')[0]
+X = dv.transform(music_selected)
+pred = model.predict_proba(X)[0, 1]
 
-# customer = {'CreditScore': float(credit_score),
-#  'Geography': str(geography),
-#  'Gender': str(gender),
-#  'Age': int(age),
-#  'Tenure': int(tenure),
-#  'Balance': float(balance),
-#  'NumOfProducts': int(num_of_products),
-#  'HasCrCard': str(has_cr_card)=='Yes',
-#  'IsActiveMember': str(is_active_member)=='Yes',
-#  'EstimatedSalary': float(estimated_salary),
-#  }
-# pred = pipeline.predict_proba(customer)[0,1]
-# pred = float(pred)
-# col1_pred, col2_pred = st.columns(2)
 
-# col1_pred.write("Probability of living the bank:")
-# col2_pred.write(f"{pred*100:.2f}%")
+col1, col2 = st.columns(2)
+
+
+col1.write("Probability of liking this music:")
+col2.write(f"{pred*100:.2f}%")
+
+
 
 
 st.write("""
-This project was done as a part of [the project-of-the-week 
-initiative at DataTalks.Club](https://github.com/DataTalksClub/project-of-the-week/blob/main/2022-08-14-frontend.md).
+This project was done as a part of [Midterm-Project](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp), this project is part of ML-Zoomcamp provided by DataTalkClub.
 """)
