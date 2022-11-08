@@ -75,3 +75,5 @@ I'll use streamlit to deploy the model.
 `streamlit run streamlit_app.py`
 ## Results
 ![Testing the app](images/testing-app.gif)
+
+You can test it following the next [link](https://eeeds-ml-camp-08-midterm-projectstreamlit-app-shxmh9.streamlit.app/)
