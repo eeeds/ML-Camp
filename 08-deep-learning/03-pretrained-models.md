@@ -14,8 +14,10 @@
 
 ## Notes
 
-Add notes from the video (PRs are welcome)
-
+-  (1, 299, 299, 3) stands for:
+   -  1 image
+   -  299x299 
+   -  3 channels
 
 <table>
    <tr>

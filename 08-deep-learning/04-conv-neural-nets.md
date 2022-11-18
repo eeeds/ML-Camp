@@ -8,7 +8,7 @@
 ## Notes
 
 Add notes from the video (PRs are welcome)
-
+* Higher values indicates higher similarity between filter and image part.
 * convolutional neural networks (CNN) consist of different types of layers
 * convolutional layer as filters (i.e. 5 x 5)
 * dense layers
@@ -18,6 +18,8 @@ Add notes from the video (PRs are welcome)
 * chaining layers of simple and complex filters allows the CNN to "learn"
 * resulting in vector representation of image
 * activation functions sigmoid for binary classification and softmax for multiclass
+* Neural Network=Multiple Logistic Regressions
+* dense layer= Matrix multiplication
 
 <table>
    <tr>

@@ -5,6 +5,7 @@
 [Slides](https://www.slideshare.net/AlexeyGrigorev/ml-zoomcamp-8-neural-networks-and-deep-learning-250592316)
 
 
+
 If you have problems cloning the repository with the data, use a different command for cloning:
 
 ```bash
@@ -16,6 +17,7 @@ git clone https://github.com/alexeygrigorev/clothing-dataset-small.git
 Add notes from the video (PRs are welcome)
 
 * introduction to this weeks topics
+>Multi-class classification
 * using images as data source instead of tabular data
 * classifying images of t-shirts using a convolutional neural network
 * 5000 images and 20 different classes https://www.kaggle.com/agrigorev/clothing-dataset-full
