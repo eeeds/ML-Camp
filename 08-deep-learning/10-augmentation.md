@@ -10,7 +10,21 @@ I used `train_gen`. That's why adding augmentations didn't help in the video.
 
 ## Notes
 
-Add notes from the video (PRs are welcome)
+* Possible image transformations
+  * Flip
+  * Rotation
+  * Shift
+  * Shear
+  * Zoom In/Out
+  * Brightness/Contrast
+* Choosing augmentations
+  * Use your own judgement
+  * Look at the dataset, what kind of variations are there?
+  * Are the objects always centered?
+    * Rotate, Shift.
+* Tune it as a hyperparameter
+  * Train it for 10-20 epochs, is it better? Yes? (Use it) No? (Don't use it), Same (train for more epochs)
+  * We don't change validation, we use original images because we can think this would be the images that ours users upload to our website.
 
 
 <table>

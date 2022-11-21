@@ -8,13 +8,13 @@
 ## Notes
 
 Add notes from the video (PRs are welcome)
-
+* Adding more layers can be very good for our model, it helps predicting the type of clothes more accurate.
 * softmax takes raw scores from a dense layer and transforms it into a probability
-* activation functions used for output vs activation functions used for intermediate steps
+* activation functions used for output (sigmoid, softmax) vs activation functions used for intermediate steps(ReLU)
 * have a look at http://cs231n.stanford.edu/2017/
-* sigmoid: negativ input --> zero, positive input --> straight line
-* relu
-* softmax
+* reLU: negativ input --> zero, positive input --> straight line
+* Use `nvidia-smi` to see how the gpu is used.
+* Adding new layers add complexicity to the model.
 
 <table>
    <tr>
