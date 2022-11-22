@@ -3,4 +3,5 @@ __pycache__/
 08-midterm-project/*.json
 08-midterm-project/data/*.csv
 08-midterm-project/notebooks/.cache
-
+cohorts/2022/08*/test
+cohorts/2022/08*/train
