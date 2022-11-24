@@ -9,7 +9,11 @@
 
 ## Notes
 
-Add notes from the video (PRs are welcome)
+1. Go to AWS 
+2. Select `Lambda`
+3. Select x_86_64 as architecture.
+4. Test the example function with a test event
+
 
 
 <table>

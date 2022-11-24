@@ -6,3 +6,4 @@ __pycache__/
 cohorts/2022/08*/test
 cohorts/2022/08*/train
 cohorts/2022/08*/*.zip
+09-serverless/code/clothing-model*
