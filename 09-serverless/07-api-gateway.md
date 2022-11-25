@@ -9,7 +9,15 @@
 
 ## Notes
 
-Add notes from the video (PRs are welcome)
+1. Go to API-Gateway
+2. Create a new API
+3. Select REST API
+4. Select an API name, then create API.
+5. Create a Resurce, like: `predict`, resource path shoud be `/predict`
+6. Create a method for the resource, `POST`
+7. Select the lambda function
+8. Deploy the API
+9. Test the API
 
 
 <table>
