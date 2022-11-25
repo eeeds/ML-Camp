@@ -9,8 +9,13 @@
 
 ## Notes
 
-Add notes from the video (PRs are welcome)
-
+1. Convert jupyter nb into python script with the following code:
+```
+jupyter nbconvert --to script tensorflow-model.ipynb
+```
+2. Go to your command line
+3. import lambda_function
+4. lambda_function.predict('http://bit.ly/mlbookcamp-pant')
 
 <table>
    <tr>

@@ -45,6 +45,19 @@ If the file is incorrect, you'll get an error message like that:
 ```
 zipfile.BadZipFile: File is not a zip file
 ```
+Build docker file using the following code:
+   
+```
+docker build -t clothing-model .
+```
+Test the docker container:
+```
+docker run -it --rm -p 8080:8080 clothing-model:latest 
+```
+Test it using a python script
+```
+python test.py
+```
 
 ## Notes
 
