@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-
 import numpy as np
-import tensorflow.lite as tflite
+import tflite_runtime.interpreter as tflite
 from io import BytesIO
 from urllib import request
 from PIL import Image
