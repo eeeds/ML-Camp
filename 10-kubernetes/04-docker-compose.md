@@ -33,10 +33,15 @@ It's not working because we need a network.
 
 Create [docker-compose.yml](code/docker-compose.yml) file.
 
+`TF_SERVING_HOST=clothing-model:8500` means go to the container named `clothing-model` and use port 8500.
+
+
 Run the containers with docker-compose:
 ```
 docker-compose up
 ```
+Test the containers with [test.py](code/test.py)
+
 
 <table>
    <tr>
