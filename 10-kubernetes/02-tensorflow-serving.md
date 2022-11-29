@@ -8,6 +8,8 @@
 
 
 ## Notes
+TensorFlow-Serving has an official Docker image ready for deployment. By using volumes (folders in the host machine that can be mounted to containers in a manner similar to external storage) we can deploy our model in a volume and attach it to a container without the need to rebuild a new image. This is very convenient for developing as it saves a lot of time not having to rebuild images constantly just for trying out different models.
+
 
 1. Download the model using this link: `wget https://github.com/alexeygrigorev/mlbookcamp-code/releases/download/chapter7-model/xception_v4_large_08_0.894.h5 -O clothing-model-v4.h5`
 

@@ -17,8 +17,9 @@ from flask import jsonify
 
 from proto import np_to_protobuf
 
-host = os.getenv('TF_SERVING_HOST', 'localhost:8500')
+#host = os.getenv('TF_SERVING_HOST', 'localhost:8500')
 
+host = 'localhost:8500'
 channel = grpc.insecure_channel(host)
 stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
 
@@ -73,7 +74,7 @@ def predict_endpoint():
 
 
 if __name__ == '__main__':
-    # url = 'http://bit.ly/mlbookcamp-pants'
-    # response = predict(url)
-    # print(response)
+    url = 'http://bit.ly/mlbookcamp-pants'
+    response = predict(url)
+    print(response)
     app.run(debug=True, host='0.0.0.0', port=9696)

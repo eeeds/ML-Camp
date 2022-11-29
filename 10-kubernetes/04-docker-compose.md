@@ -9,8 +9,34 @@
 
 ## Notes
 
-Add notes from the video (PRs are welcome)
+Create [image-gateway.dockerfile](code/image-gateway.dockerfile) and 
+[image-model.dockerfile](code/image-model.dockerfile) files.
 
+
+Build a docker image:
+```
+docker build -t zoomcamp-10-model:xception-v4-001 -f image-model.dockerfile .
+docker build -t zoomcamp-10-gateway:001 -f image-gateway.dockerfile .
+```
+For run the containers:
+```
+docker run -it --rm `
+   -p 8500:8500 `
+   zoomcamp-10-model:xception-v4-001
+
+docker run -it --rm `
+   -p 9696:9696 `
+   zoomcamp-10-gateway:001
+```
+Test the containers with [test.py](code/test.py)
+It's not working because we need a network.
+
+Create [docker-compose.yml](code/docker-compose.yml) file.
+
+Run the containers with docker-compose:
+```
+docker-compose up
+```
 
 <table>
    <tr>

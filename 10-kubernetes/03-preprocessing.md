@@ -9,8 +9,29 @@
 
 ## Notes
 
-Add notes from the video (PRs are welcome)
+Creating the pre-processing service (gateway)
+* jupyter nbconvert --to script notebook.ipynb
 
+There is one issue: in the notebook we defined the following function:
+
+```python
+def np_to_protobuf(data):
+    return tf.make_tensor_proto(data, shape=data.shape)
+```
+
+The `make_tensor_proto()` method is a TensorFlow method and TensorFlow is a huge library about 2GB in size. A smaller `tensorflow-cpu` library exists but it still is over 400MB in size.
+
+Since we only need to use that particular method, we can instead make use of a separate [`tensorflow-protobuf`](https://github.com/alexeygrigorev/tensorflow-protobuf) package which is available on pip.
+
+```python
+!pip install tensorflow-protobuf==2.7.0
+```
+
+The [GitHub page for `tensorflow-protobuf`](https://github.com/alexeygrigorev/tensorflow-protobuf) contains info on how to replace the `make_tensor_proto()` method.
+
+Since the additional code is wordy, it would be convenient to define the `np_to_protobuf()` method on a separate `proto.py` script and then import it to the gateway app with `from proto import np_to_protobuf`.
+
+>Summary
 * turn jupyter notebook into flask app
 * the notebook communicates with the model deployed with tensorflow
 * the notebook fetches an image, pre-processes it, turns it into protobuf, sends it to tensorflow-serving, does post-processing and finally gives a human-readable answer
