@@ -8,3 +8,5 @@ cohorts/2022/08*/train
 cohorts/2022/08*/*.zip
 09-serverless/code/clothing-model*
 cohorts/2022/09*/dino_dragon*
+10-kubernetes/clothing-model
+10-kubernetes/*.h5
