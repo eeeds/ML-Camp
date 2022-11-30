@@ -76,8 +76,19 @@ kubectl port-forward ping-deployment-6988b67698-pmzpr 9696:9696
 ```
 ![kubernetes-succesful](./images/kubernetes-successul.PNG)
 ## Test it with `curl localhost:9696/ping`
-
+It's working!
 ## Create the service file
+## Apply the service
+```
+kubectl apply -f service.yaml
+```
+## See it with `kubectl get svc`
+## Port-forward the service
+8080 is from your computer and 80 is from kubernetes service.
+```
+kubectl port-forward service/ping 8080:80
+```
+## Test it with `curl localhost:8080/ping`
 ## Notes
 
 Add notes from the video (PRs are welcome)
