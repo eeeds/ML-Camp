@@ -7,6 +7,15 @@
 [Slides](https://www.slideshare.net/AlexeyGrigorev/ml-zoomcamp-10-kubernetes)
 
 
+## Build the image for it
+```
+docker build -t ping:v001 .
+```
+## Run it
+```
+docker run -it --rm -p 9696:9696 ping:v001
+```
+## Test with `curl localhost:9696/ping`
 ## Creating a cluster with Kind
 
 If you use WSL2 and get the following errors when creating a cluster with `kind create cluster` 
@@ -22,7 +31,53 @@ Specify the node image:
 ```
 kind create cluster --image kindest/node:v1.23.0
 ```
+Services that are running:
+```
+kubectl get service
+```
+## Install kubernetes extension on VSC
+## Create deployment file
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ping-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ping
+  template:
+    metadata:
+      labels:
+        app: ping
+    spec:
+      containers:
+      - name: ping-pod
+        image: ping:v001
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+        ports:
+        - containerPort: 9696
 
+```
+Apply it with `kubectl apply -f deployment.yaml` and see it with `kubectl get deployment` and pod with `kubectl get pod` and its description with `kubectl describe pod ping-deployment-6988b67698-pmzpr`
+
+We've got an error because we didn't load the image to kubernetes.
+## Load image
+```
+kind load docker-image ping:v001
+```
+## Forward the port 
+```
+kubectl port-forward ping-deployment-6988b67698-pmzpr 9696:9696
+```
+![kubernetes-succesful](./images/kubernetes-successul.PNG)
+## Test it with `curl localhost:9696/ping`
+
+## Create the service file
 ## Notes
 
 Add notes from the video (PRs are welcome)

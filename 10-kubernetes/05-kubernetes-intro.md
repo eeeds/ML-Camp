@@ -12,6 +12,15 @@
 Add notes from the video (PRs are welcome)
 
 * kubernetes is open source system for automating deployment scaling and management of containerized applications
+* node is like a server/computer (EC2 instance)
+* pod approximately like docker container, runs on a node
+* deployment = group of pods with the same image and config
+* service=the entrypoint of an application
+* external = load balancer, internal = cluster ip
+* ingress = entrypoint to the cluster
+* HPA horizontal pod autoscaler = allocating resources depending on demand
+
+
 * to scale up = add more instances of our application
 * add more instances when load increases and remove instances when load decreases
 * kubernetes cluster consists of nodes (running machines, servers)
