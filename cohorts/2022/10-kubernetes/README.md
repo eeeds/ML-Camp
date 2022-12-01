@@ -214,9 +214,14 @@ spec:
 ```
 
 Fill it in. What do we need to write instead of `<???>`?
+## Answer: credit-card
 
 Apply this config file.
 
+Apply it with:
+```
+kubectl apply -f service.yaml
+```
 
 ## Testing the service
 
@@ -224,13 +229,13 @@ We can test our service locally by forwarding the port 9696 on our computer
 to the port 80 on the service:
 
 ```bash
-kubectl port-forward service/<Service name> 9696:80
+kubectl port-forward service/credit-card 9696:80
 ```
 
 Run `q6_test.py` (from the homework 5) once again to verify that everything is working. 
 You should get the same result as in Question 1.
 
-
+![testing-service](images/testing-service.PNG)
 ## Autoscaling
 
 Now we're going to use a [HorizontalPodAutoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/) 
