@@ -130,7 +130,8 @@ What's the command we need to run for that?
 * `kind load docker-image`
 * `kubectl apply`
 
-
+## Answer: `kind load docker-image zoomcamp-model:v001`
+![image](images/docker-image.PNG)
 ## Question 6
 
 Now let's create a deployment config (e.g. `deployment.yaml`):
@@ -171,7 +172,29 @@ What is the value for `<Port>`?
 Apply this deployment using the appropriate command and get a list of running Pods. 
 You can see one running Pod.
 
+Command that applied:
+```
+kubectl apply -f deployment.yaml
+```
+## Answer: 9696
 
+Make sure that is working with:
+```
+kubectl get deployment
+```
+![q6](images/q6.PNG)
+
+And the pod that is running:
+```
+kubectl get pods
+```
+![pods-running](images/pods-running.PNG)
+## Testing the deployment
+Forward the port with the following command:
+```
+kubectl port-forward credit-card-65f5777cf9-k6hzg 9696:9696
+```
+![port-forward](images/testing-deployment.PNG)
 ## Question 7
 
 Let's create a service for this deployment (`service.yaml`):
