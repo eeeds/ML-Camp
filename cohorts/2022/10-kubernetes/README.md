@@ -80,13 +80,16 @@ Now let's create a cluster with `kind`:
 ```bash
 kind create cluster
 ```
-
+In my case I had to use:
+```
+kind create cluster --image kindest/node:v1.23.0
+```
 And check with `kubectl` that it was successfully created:
 
 ```bash
 kubectl cluster-info
 ```
-
+![Kubernetes-cluster-created](images/kubernetes-cluster-created.PNG)
 
 ## Question 3
 
@@ -97,6 +100,8 @@ in Kubernetes (`kind` in our case)?
 * Pod
 * Deployment
 * Service
+
+## Answer: Pod
 
 
 ## Question 4
@@ -110,7 +115,9 @@ What's the `Type` of the service that is already running there?
 * LoadBalancer
 * ExternalName
 
+![q4](images/q4.PNG)
 
+## Answer: ClusterIP
 ## Question 5
 
 To be able to use the docker image we previously created (`zoomcamp-model:v001`),
